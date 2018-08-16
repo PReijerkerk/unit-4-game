@@ -48,5 +48,22 @@ console.log(red);
 });
 
 
-
+//Connects the buttons to the value of the color IDs
+$("button").on("click"), function() {
+    if (this.id === "blue") {
+        userTotalScore += blue;
+    } 
+    if (this.id === "yellow") {
+        userTotalScore += yellow;
+    }
+    if (this.id === "green") {
+        userTotalScore += green;
+    }
+    else if (this.id === "red") {
+        userTotalScore += red;
+    }
+//sets userTotalScore to be displayed in the html
+//BUG// does not appear to be working
+$("#score").html(userTotalScore);
+};
 
