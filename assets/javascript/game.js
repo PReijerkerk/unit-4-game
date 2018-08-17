@@ -13,16 +13,21 @@ $(document).ready(function () {
     //displays initial score to 0
     $("#score").html(userTotalScore);
 
+    //displays initial wins/losses
+    $("#wins").html(userWins);
+    $("#losses").html(userLosses);
+
     //Generate a random # for the user
     const generateRandomNum = function(){
         var randomScore = Math.floor(Math.random() * 100) + 19;
         computerNum = randomScore;
         console.log(randomScore);
+        return computerNum;
     }
 
     //display random number to html
-    //BUG // Calls the generateRandomNum function, but does not change the html of the span id randomNumber
     $("#randomNumber").html(generateRandomNum());
+
 
     //base function for generating a value for crystals
     const generateCrystalNum = function() {
@@ -45,16 +50,14 @@ $(document).ready(function () {
     console.log(yellow);
     console.log(green);
     console.log(red);
-    });
-
 
     //Connects the buttons to the value of the color IDs
-    $("button").on("click"), function() {
+    $(":button").click(function() {
         if (this.id === "blue") {
             userTotalScore += blue;
         } 
         if (this.id === "yellow") {
-            userTotalScore += yellow;
+           userTotalScore += yellow;
         }
         if (this.id === "green") {
             userTotalScore += green;
@@ -62,10 +65,12 @@ $(document).ready(function () {
         else if (this.id === "red") {
             userTotalScore += red;
         }
+        $("#score").html(userTotalScore);
         console.log(userTotalScore);
+        winLose();
+    })
     //sets userTotalScore to be displayed in the html
-    //BUG// does not appear to be working
-    $("#score").html(userTotalScore);
+    
 
     //function to determine if user has won or lost the game
     winLose = function() {
@@ -75,6 +80,7 @@ $(document).ready(function () {
             alert("You've Won!");
             reset();
         }
+        // If userTotalScore is greater then computerNum increase losses by 1, show the new loss amount in the html and alert the user that you've lost.
         else if (userTotalScore > computerNum) {
             userLosses++;
             $("#losses").html(userLosses);
@@ -94,7 +100,10 @@ $(document).ready(function () {
         computerNum = 0;
         initialCrystalNums();
         $("#randomNumber").html(computerNum = generateRandomNum());
-}
+    }
+});
 
-};
+
+
+
 
