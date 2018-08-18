@@ -50,3 +50,9 @@ body {
     border-radius: 20px;
     background-color: white;
 }
+
+.col-centered {
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+  }
