@@ -1,0 +1,52 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+p {
+    text-align: center;
+}
+
+body {
+    background-image: url("../images/Sac-Actun-caves.jpg");
+    background-size: cover;
+    height: 100%;
+    width:100%;
+}
+
+.page-header {
+    border: 5px solid black;
+    border-radius: 20px;
+    background-color: white;
+}
+
+#Game-Instructions {
+    border: 5px solid black;
+    border-radius: 20px;
+    background-color: white;
+}
+
+#randomNumberDiv {
+    border: 5px solid black;
+    border-radius: 20px;
+    background-color: white;
+}
+
+#win-loss-holder{
+    border: 5px solid black;
+    border-radius: 20px;
+    background-color: white;
+}
+
+#totalScore {
+    border: 5px solid black;
+    border-radius: 20px;
+    background-color: white;
+}
+
+#blue,
+#yellow,
+#green,
+#red {
+    border: 5px solid black;
+    border-radius: 20px;
+    background-color: white;
+}
