@@ -21,7 +21,7 @@ $(document).ready(function () {
     const generateRandomNum = function(){
         var randomScore = Math.floor(Math.random() * 100) + 19;
         computerNum = randomScore;
-        console.log(randomScore);
+        console.log(randomScore + " Score to Match");
         return computerNum;
     }
 
@@ -46,10 +46,10 @@ $(document).ready(function () {
     //Calls the crystalNum function that assigns values to the color variables
     //logs the color variables for testing purposes
     initialCrystalNums();
-    console.log(blue);
-    console.log(yellow);
-    console.log(green);
-    console.log(red);
+    console.log(blue + " blue crystal value");
+    console.log(yellow + " yellow crystal value");
+    console.log(green + " green crystal value");
+    console.log(red + " red crystal value");
 
     //Connects the buttons to the value of the color IDs
     $(":button").click(function() {
